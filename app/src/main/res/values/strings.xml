@@ -3,4 +3,5 @@
     <string name="enables">Disponíveis</string>
     <string name="in_run">Em processo</string>
     <string name="done">Finalizadas</string>
+    <string name="title_activity_show_detail">ShowDetailActivity</string>
 </resources>
