@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         cvItem.setOnClickListener { v ->
             Log.i("TAG", "sjhjshfd")
-            var mIntent = Intent(this, ShowDetailActivity::class.java)
+            var mIntent = Intent(this, ThreeActivity::class.java)
             var apc = ActivityOptionsCompat.makeSceneTransitionAnimation(this, cvItem, getString(R.string.transaction_key_item_main) )
             ActivityCompat.startActivity(this, mIntent, apc.toBundle())
         }

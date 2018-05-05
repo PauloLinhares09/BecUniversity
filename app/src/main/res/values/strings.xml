@@ -6,4 +6,5 @@
     <string name="title_activity_show_detail">ShowDetailActivity</string>
 
     <string name="transaction_key_item_main">ItemName</string>
+    <string name="title_activity_three">ThreeActivity</string>
 </resources>
