@@ -4,12 +4,14 @@ import android.os.Bundle
 import android.app.Activity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.Window
 
 import kotlinx.android.synthetic.main.activity_show_detail.*
 
 class ShowDetailActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_detail)
         actionBar?.setDisplayHomeAsUpEnabled(true)

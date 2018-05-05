@@ -1,10 +1,16 @@
 package com.hpr.becuniversity
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.ActivityCompat
+import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.CardView
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.Window
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,10 +35,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
+        cvItem.setOnClickListener { v ->
+            Log.i("TAG", "sjhjshfd")
+            var mIntent = Intent(this, ShowDetailActivity::class.java)
+            var apc = ActivityOptionsCompat.makeSceneTransitionAnimation(this, cvItem, getString(R.string.transaction_key_item_main) )
+            ActivityCompat.startActivity(this, mIntent, apc.toBundle())
+        }
     }
 
 

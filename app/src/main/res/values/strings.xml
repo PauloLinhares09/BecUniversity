@@ -4,4 +4,6 @@
     <string name="in_run">Em processo</string>
     <string name="done">Finalizadas</string>
     <string name="title_activity_show_detail">ShowDetailActivity</string>
+
+    <string name="transaction_key_item_main">ItemName</string>
 </resources>

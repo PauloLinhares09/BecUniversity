@@ -6,7 +6,7 @@
         android:id="@+id/icMenuProfile"
         app:showAsAction="always"
         android:title=""
-        android:icon="@drawable/ic_launcher_background">
+        android:icon="@drawable/account_circle">
 
     </item>
 
