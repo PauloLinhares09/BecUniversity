@@ -28,14 +28,9 @@ class CheckVoteActivity : AppCompatActivity() {
                 false)
 
         var lista_step = ArrayList<StepPregao>()
-        lista_step.add(StepPregao("Proposta",true))
-        lista_step.add(StepPregao("Abertura C. Pública"))
-        lista_step.add(StepPregao("Classificação"))
-        lista_step.add(StepPregao("Lances"))
-        lista_step.add(StepPregao("Negocioação"))
-        lista_step.add(StepPregao("Habilitação"))
-        lista_step.add(StepPregao("Recurso"))
-        lista_step.add(StepPregao("Encerrado"))
+        lista_step.add(StepPregao("Superfatiramento",true))
+        lista_step.add(StepPregao("Qualificações"))
+        lista_step.add(StepPregao("Pregoeiro"))
 
         var adapter = StepAdapter(lista_step,this)
 
