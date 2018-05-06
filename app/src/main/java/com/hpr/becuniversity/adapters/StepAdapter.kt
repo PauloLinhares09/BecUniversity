@@ -65,7 +65,7 @@ class StepAdapter(var mlista: List<StepPregao>,
 
     }
 
-    private fun selecionar(position: Int) {
+     fun selecionar(position: Int) {
         var i = 0
         for (StepPregao in mlista){
 
