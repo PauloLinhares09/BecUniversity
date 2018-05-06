@@ -1,5 +1,6 @@
 package com.hpr.becuniversity
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -9,8 +10,11 @@ import android.view.Window
 
 import kotlinx.android.synthetic.main.activity_analyze_proposal.*
 import android.support.design.widget.TabLayout
+import android.support.v4.app.ActivityCompat
+import android.support.v4.app.ActivityOptionsCompat
 import android.view.View
 import com.hpr.becuniversity.adapters.PageAdapterAnalyzeActivity
+import kotlinx.android.synthetic.main.content_activity_analyze_proposal.*
 
 
 class AnalyzeProposalActivity : AppCompatActivity() {
@@ -34,9 +38,16 @@ class AnalyzeProposalActivity : AppCompatActivity() {
 
         //Floating
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show()
+            openActivity(CheckVoteActivity::class.java)
         }
+    }
+
+    private fun openActivity(mActivity: Class<CheckVoteActivity>) {
+        var mIntent = Intent(this, mActivity)
+        var apc = ActivityOptionsCompat.makeSceneTransitionAnimation(this, cvItem, getString(R.string.transaction_key_item_main))
+        ActivityCompat.startActivity(this, mIntent, apc.toBundle())
     }
 
 
