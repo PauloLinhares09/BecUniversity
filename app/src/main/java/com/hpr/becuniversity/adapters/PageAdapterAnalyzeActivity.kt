@@ -21,7 +21,19 @@ class PageAdapterAnalyzeActivity : FragmentPagerAdapter {
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
-        return super.getPageTitle(position)
+
+
+        return getNameFragment(position)
+    }
+
+    private fun getNameFragment(position: Int): CharSequence? {
+
+        if (position == 0)
+            return "Proposta"
+        else if (position == 1)
+            return "Necessidade"
+
+        return ""
     }
 
 
