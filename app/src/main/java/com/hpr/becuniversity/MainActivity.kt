@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.Window
@@ -84,6 +85,16 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        var id = item!!.itemId
+        when(id){
+            android.R.id.home ->{
+                Log.i("TAG", "home namvigation")
+                mPopBackStack()
+            }
+
+
+        }
+
         return super.onOptionsItemSelected(item)
     }
 

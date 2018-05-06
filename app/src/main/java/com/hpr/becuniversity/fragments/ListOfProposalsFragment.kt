@@ -5,6 +5,7 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.*
 import com.hpr.becuniversity.MainActivity
 
@@ -76,6 +77,7 @@ class ListOfProposalsFragment : Fragment() {
         var id = item!!.itemId
         when(id){
             android.R.id.home -> {
+                Log.i("TAG", "fragment home navigation")
                 (listener as MainActivity).mPopBackStack()
                 (listener as MainActivity).mIconHomeHasEnable(false)
             }
