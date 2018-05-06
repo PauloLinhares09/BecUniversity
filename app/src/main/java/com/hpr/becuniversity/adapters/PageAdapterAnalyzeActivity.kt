@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.view.PagerAdapter
 import android.view.View
 import com.hpr.becuniversity.fragments.Tab1AnalyzeFragment
+import com.hpr.becuniversity.fragments.Tab2AnalyzeFragment
 
 class PageAdapterAnalyzeActivity : FragmentPagerAdapter {
 
@@ -13,7 +14,13 @@ class PageAdapterAnalyzeActivity : FragmentPagerAdapter {
 
 
     override fun getItem(position: Int): Fragment {
-       return Tab1AnalyzeFragment.newInstance("")
+        var fragment : Fragment = Tab1AnalyzeFragment.newInstance("")
+
+        if (position == 1)
+            fragment = Tab2AnalyzeFragment.newInstance("")
+
+
+        return fragment
     }
 
     override fun getCount(): Int {

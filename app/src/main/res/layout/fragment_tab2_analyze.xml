@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragments.Tab2AnalyzeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="103dp">
+
+        <RelativeLayout
+            android:id="@+id/cv_main"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/quadro_licitacao"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:transitionName="@string/transaction_key_item_main">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/fab_margin"
+                    android:orientation="vertical">
+
+                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:text="Hospital Sírio Libanês"
+                        style="@style/TextBigWhite"/>
+
+                </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvItemProposal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintBottom_toTopOf="@+id/navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/message"
+            app:layout_constraintVertical_bias="0.005"
+            android:transitionName="@string/transaction_key_item_main">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--Colum central-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/margin_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="Está comprando"
+                        style="@style/TextSubtitle"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:text="Lorem ipsum curae nisl accumsan torquent convallis lobortis senectus erat egestas, ultricies quam massa sollicitudin cras fames felis dolor donec aliquam massa, nullam mauris scelerisque neque justo felis id primis fermentum. nunc quisque nullam imperdiet nisi lorem viverra himenaeos non eget taciti, nunc cras sed quam maecenas tellus ornare ipsum risus himenaeos, bibendum nisi rutrum metus a facilisis curae litora posuere. inceptos diam mattis viverra platea suscipit, aptent viverra nunc taciti hac, nullam venenatis dapibus erat. conubia ante litora vivamus non nisl habitant eros turpis venenatis, egestas duis torquent curae platea accumsan porta convallis lobortis nibh, est fringilla faucibus tristique est cras dictum ultrices. " />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginBottom="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_16"
+                        android:layout_marginHorizontal="@dimen/margin_16">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/circle_drawable"
+                            android:text="Data publicação "
+                            android:layout_marginVertical="@dimen/margin_3"
+                            android:layout_gravity="right"
+                            android:padding="@dimen/margin_10"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/circle_drawable"
+                            android:text="11/01/2018"
+                            android:layout_marginVertical="@dimen/margin_3"
+                            android:layout_gravity="right"
+                            android:padding="@dimen/margin_10"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/fab_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precisa para até"
+                android:textColor="@android:color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:text="06/11/2018"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="35sp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_gravity="right"
+                android:text="acima do valor de mercado"
+                android:textColor="@android:color/white"/>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
