@@ -33,7 +33,7 @@ class MainHomeFragment : Fragment() {
 
         view.cvItem.setOnClickListener { v ->
             Log.i("TAG", "sjhjshfd")
-//            openActivity(ThreeActivity::class.java)
+//            openActivity(AnalyzeProposalActivity::class.java)
             var fragment = ListOfProposalsFragment.newInstance("")
             (listener as MainActivity).mReplaceFragment(fragment, ListOfProposalsFragment::class.java.simpleName)
         }

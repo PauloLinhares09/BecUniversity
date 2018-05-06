@@ -42,15 +42,12 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        mReplaceFragment(MainHomeFragment.newInstance(""), MainHomeFragment::class.java.simpleName)
+
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
-
     }
 
-    override fun onResume() {
-        super.onResume()
-        mReplaceFragment(MainHomeFragment.newInstance(""), MainHomeFragment::class.java.simpleName)
-    }
 
     fun mReplaceFragment(fragment: Fragment, flag :  String) {
         if (flag.equals(ListOfProposalsFragment::class.java.simpleName, true)){
@@ -71,7 +68,7 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
         supportActionBar!!.setDisplayHomeAsUpEnabled(enable)
     }
 
-//    private fun openActivity(mActivity: Class<ThreeActivity>) {
+//    private fun openActivity(mActivity: Class<AnalyzeProposalActivity>) {
 //        var mIntent = Intent(this, mActivity)
 //        var apc = ActivityOptionsCompat.makeSceneTransitionAnimation(this, cvItem, getString(R.string.transaction_key_item_main))
 //        ActivityCompat.startActivity(this, mIntent, apc.toBundle())

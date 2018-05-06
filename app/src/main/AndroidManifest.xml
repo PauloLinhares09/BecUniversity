@@ -31,7 +31,7 @@
                 android:value="com.hpr.becuniversity.MainActivity" />
         </activity>
         <activity
-            android:name=".ThreeActivity"
+            android:name=".AnalyzeProposalActivity"
             android:label="@string/title_activity_three"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
