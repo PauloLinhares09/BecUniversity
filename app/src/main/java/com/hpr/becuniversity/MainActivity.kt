@@ -11,7 +11,6 @@ import android.view.Window
 import com.hpr.becuniversity.fragments.ListOfProposalsFragment
 import com.hpr.becuniversity.fragments.MainHomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_three.*
 
 class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeListener, ListOfProposalsFragment.OnFragmentListProposalsListener {
 
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
     }
 
     fun mReplaceFragment(fragment: Fragment, flag :  String) {
-        if (flag.equals(ListOfProposalsFragment.OnFragmentListProposalsListener::class.java.simpleName)){
+        if (flag.equals(ListOfProposalsFragment::class.java.simpleName, true)){
             mIconHomeHasEnable(true)
         }
 
@@ -68,7 +67,7 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
     }
 
     fun mIconHomeHasEnable(enable: Boolean){
-        toolbar.setNavigationIcon(R.drawable.ic_dashboard_black_24dp)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(enable)
     }
 
 //    private fun openActivity(mActivity: Class<ThreeActivity>) {

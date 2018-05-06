@@ -35,7 +35,7 @@ class MainHomeFragment : Fragment() {
             Log.i("TAG", "sjhjshfd")
 //            openActivity(ThreeActivity::class.java)
             var fragment = ListOfProposalsFragment.newInstance("")
-            (listener as MainActivity).mReplaceFragment(fragment, MainHomeFragment::class.java.simpleName)
+            (listener as MainActivity).mReplaceFragment(fragment, ListOfProposalsFragment::class.java.simpleName)
         }
 
         return view
