@@ -8,6 +8,7 @@ import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_final_score.*
 import android.support.animation.SpringForce
+import com.hpr.becuniversity.R.id.toolbar
 import kotlinx.android.synthetic.main.content_final_score.*
 
 

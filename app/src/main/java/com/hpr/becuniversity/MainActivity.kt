@@ -4,6 +4,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentManager
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.Menu
@@ -13,7 +14,7 @@ import com.hpr.becuniversity.fragments.ListOfProposalsFragment
 import com.hpr.becuniversity.fragments.MainHomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeListener, ListOfProposalsFragment.OnFragmentListProposalsListener {
+class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeListener, ListOfProposalsFragment.OnFragmentListProposalsListener, FragmentManager.OnBackStackChangedListener {
 
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -42,6 +43,8 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportFragmentManager.addOnBackStackChangedListener(this)
+
         mReplaceFragment(MainHomeFragment.newInstance(""), MainHomeFragment::class.java.simpleName)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
@@ -50,13 +53,14 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
 
 
     fun mReplaceFragment(fragment: Fragment, flag :  String) {
-        if (flag.equals(ListOfProposalsFragment::class.java.simpleName, true)){
-            mIconHomeHasEnable(true)
-        }
+//        if (flag.equals(ListOfProposalsFragment::class.java.simpleName, true)){
+//            mIconHomeHasEnable(true)
+//        }
 
         val manager = supportFragmentManager
         val transaction = manager.beginTransaction()
         transaction.replace(R.id.container_fragment, fragment, flag)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 
@@ -86,7 +90,8 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
         when(id){
             android.R.id.home ->{
                 Log.i("TAG", "home namvigation")
-                mPopBackStack()
+                //mPopBackStack()
+                onBackPressed()
             }
 
 
@@ -101,5 +106,25 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
 
     override fun onFragmentListProposalsApi(uri: Uri) {
 
+    }
+
+
+    fun shouldDisplayHomeUp() {
+        //Enable Up button only  if there are entries in the back stack
+        val canback = supportFragmentManager.backStackEntryCount > 1
+        supportActionBar!!.setDisplayHomeAsUpEnabled(canback)
+    }
+
+    override fun onBackStackChanged() {
+        shouldDisplayHomeUp()
+    }
+
+    override fun onBackPressed() {
+        val fm = supportFragmentManager
+        if (fm.backStackEntryCount > 1) {
+            super.onBackPressed()
+        }else{
+            finish()
+        }
     }
 }
