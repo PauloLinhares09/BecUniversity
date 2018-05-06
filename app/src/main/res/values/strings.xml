@@ -3,14 +3,13 @@
     <string name="enables">Disponíveis</string>
     <string name="in_run">Em processo</string>
     <string name="done">Finalizadas</string>
-    <string name="title_activity_show_detail">ShowDetailActivity</string>
+    <string name="title_activity_show_detail">Detalhes</string>
 
     <string name="transaction_key_item_main">ItemName</string>
-    <string name="title_activity_three">ThreeActivity</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_analyze">Análise da Proposta</string>
-    <string name="title_activity_check_vote">checkVoteActivity</string>
-    <string name="title_activity_final_score">FinalScoreActivity</string>
+    <string name="title_activity_check_vote">Antifraude</string>
+    <string name="title_activity_final_score">Concluído</string>
 </resources>

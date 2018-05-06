@@ -51,6 +51,11 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        mIconHomeHasEnable(false)
+    }
+
 
     fun mReplaceFragment(fragment: Fragment, flag :  String) {
 //        if (flag.equals(ListOfProposalsFragment::class.java.simpleName, true)){

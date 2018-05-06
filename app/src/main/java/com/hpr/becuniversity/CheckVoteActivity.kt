@@ -1,5 +1,6 @@
 package com.hpr.becuniversity
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v4.view.ViewPager
@@ -94,7 +95,7 @@ class CheckVoteActivity : AppCompatActivity(), FlowChekVote {
         if (view_pager.currentItem < 2) {
             view_pager.currentItem = view_pager.currentItem + 1
         }else{
-
+            startActivity(Intent(this, FinalScoreActivity::class.java))
         }
     }
 

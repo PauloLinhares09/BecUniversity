@@ -44,6 +44,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.hpr.becuniversity.AnalyzeProposalActivity" />
         </activity>
+
+        <activity
+            android:name=".FinalScoreActivity"
+            android:label="@string/title_activity_final_score"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hpr.becuniversity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

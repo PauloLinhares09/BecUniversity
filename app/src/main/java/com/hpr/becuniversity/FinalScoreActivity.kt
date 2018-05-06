@@ -23,27 +23,27 @@ class FinalScoreActivity : AppCompatActivity() {
     }
 
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        var id = item!!.itemId
-
-        when(id){
-            android.R.id.home ->
-                    navigateUpTo(Intent(this, MainActivity::class.java))
-        }
-
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+//        var id = item!!.itemId
+//
+//        when(id){
+//            android.R.id.home ->
+//                    navigateUpTo(Intent(this, MainActivity::class.java))
+//        }
+//
+//        return super.onOptionsItemSelected(item)
+//    }
 
     override fun onResume() {
         super.onResume()
 
-        var springY = SpringAnimation(llScoreValue, SpringAnimation.ROTATION_Y, 0f)
+        var springY = SpringAnimation(llScoreValue, SpringAnimation.ROTATION_Y, llScoreValue.y)
 
         val springForceX = SpringForce()
         springForceX.stiffness = SpringForce.STIFFNESS_MEDIUM
         springForceX.dampingRatio = SpringForce.DAMPING_RATIO_HIGH_BOUNCY
         springY.setSpring(springForceX)
-        springY.start()
+        springY.setStartVelocity(5000f)
 
     }
 
