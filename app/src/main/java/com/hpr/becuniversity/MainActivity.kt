@@ -19,18 +19,18 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                message.setText(R.string.enables)
+//                message.setText(R.string.enables)
 
                 mReplaceFragment(MainHomeFragment.newInstance(""), MainHomeFragment::class.java.simpleName)
 
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                message.setText(R.string.in_run)
+//                message.setText(R.string.in_run)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                message.setText(R.string.done)
+//                message.setText(R.string.done)
                 return@OnNavigationItemSelectedListener true
             }
         }

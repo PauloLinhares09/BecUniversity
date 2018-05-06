@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".AnalyzeProposalActivity"
-    tools:showIn="@layout/activity_three">
+    tools:showIn="@layout/activity_analyze_proposal">
 
     <ImageView
         android:id="@+id/cv_main"

@@ -7,14 +7,14 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.Window
 
-import kotlinx.android.synthetic.main.activity_three.*
+import kotlinx.android.synthetic.main.activity_analyze_proposal.*
 
 class AnalyzeProposalActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         window.requestFeature(Window.FEATURE_CONTENT_TRANSITIONS)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_three)
+        setContentView(R.layout.activity_analyze_proposal)
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
