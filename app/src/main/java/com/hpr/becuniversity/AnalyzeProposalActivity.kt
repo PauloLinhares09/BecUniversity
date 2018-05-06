@@ -40,7 +40,8 @@ class AnalyzeProposalActivity : AppCompatActivity() {
         fab.setOnClickListener { view ->
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                    .setAction("Action", null).show()
-            openActivity(CheckVoteActivity::class.java)
+            //openActivity(CheckVoteActivity::class.java)
+            startActivity(Intent(this@AnalyzeProposalActivity,CheckVoteActivity::class.java))
         }
     }
 
