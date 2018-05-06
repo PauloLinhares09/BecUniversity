@@ -16,11 +16,13 @@
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".AnalyzeProposalActivity"
@@ -35,14 +37,20 @@
             android:label="@string/title_activity_check_vote"
             android:parentActivityName=".AnalyzeProposalActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hpr.becuniversity.AnalyzeProposalActivity" />
+        </activity>
+        <activity
+            android:name=".FinalScoreActivity"
+            android:label="@string/title_activity_final_score"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.hpr.becuniversity.AnalyzeProposalActivity" />
         </activity>
     </application>
 

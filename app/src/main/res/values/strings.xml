@@ -12,4 +12,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_analyze">Análise da Proposta</string>
     <string name="title_activity_check_vote">checkVoteActivity</string>
+    <string name="title_activity_final_score">FinalScoreActivity</string>
 </resources>
