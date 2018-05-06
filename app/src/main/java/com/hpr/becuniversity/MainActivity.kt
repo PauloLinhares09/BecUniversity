@@ -121,7 +121,7 @@ class MainActivity : AppCompatActivity(), MainHomeFragment.OnFragmentMainHomeLis
 
     override fun onBackPressed() {
         val fm = supportFragmentManager
-        if (fm.backStackEntryCount > 0) {
+        if (fm.backStackEntryCount > 1) {
             super.onBackPressed()
         }else{
             finish()
