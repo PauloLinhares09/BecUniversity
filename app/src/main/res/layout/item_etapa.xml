@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textview_step"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Recebimento de propostas"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"
+            android:padding="10dp"/>
+
+        <View
+            android:id="@+id/view_ponta"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_triangle_gray"/>
+
+    </LinearLayout>
+
+</FrameLayout>
