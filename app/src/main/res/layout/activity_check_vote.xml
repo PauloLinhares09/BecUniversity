@@ -27,7 +27,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 
-    <include layout="@layout/content_check_vote" />
+    <include layout="@layout/content_check_vote_0" />
 
     <!--<android.support.design.widget.FloatingActionButton-->
         <!--android:id="@+id/fab"-->
