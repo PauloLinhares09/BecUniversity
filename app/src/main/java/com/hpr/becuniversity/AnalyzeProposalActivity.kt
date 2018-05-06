@@ -8,6 +8,10 @@ import android.view.MenuItem
 import android.view.Window
 
 import kotlinx.android.synthetic.main.activity_analyze_proposal.*
+import android.support.design.widget.TabLayout
+import android.view.View
+import com.hpr.becuniversity.adapters.PageAdapterAnalyzeActivity
+
 
 class AnalyzeProposalActivity : AppCompatActivity() {
 
@@ -18,6 +22,17 @@ class AnalyzeProposalActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
+        //view pager and tabs
+        // Add Fragments to adapter one by one
+
+        val adapter = PageAdapterAnalyzeActivity(supportFragmentManager)
+        pager.setAdapter(adapter)
+
+        val tabLayout = findViewById<View>(R.id.tabs) as TabLayout
+        tabLayout.setupWithViewPager(pager)
+
+
+        //Floating
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()

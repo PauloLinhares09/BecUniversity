@@ -24,7 +24,6 @@ class ListOfProposalsFragment : Fragment() {
     private var param1: String? = null
     private var listener: OnFragmentListProposalsListener? = null
 
-    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {

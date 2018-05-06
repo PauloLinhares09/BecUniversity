@@ -23,17 +23,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ShowDetailActivity"
-            android:label="@string/title_activity_show_detail"
-            android:parentActivityName=".MainActivity">
+            android:name=".AnalyzeProposalActivity"
+            android:label="@string/title_activity_analyze"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.hpr.becuniversity.MainActivity" />
         </activity>
-        <activity
-            android:name=".AnalyzeProposalActivity"
-            android:label="@string/title_activity_three"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
