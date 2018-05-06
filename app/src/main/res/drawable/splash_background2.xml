@@ -3,7 +3,7 @@
 
     <item android:drawable="@color/colorPrimary" />
 
-    <item android:gravity="center" android:drawable="@mipmap/ic_launcher_round">
+    <item android:gravity="center" android:drawable="@drawable/logo_bec">
 
     </item>
 
